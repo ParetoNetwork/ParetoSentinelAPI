@@ -42,7 +42,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/User"
+                  "$ref": "#/components/schemas/SignResponse"
                 }
               }
             }
@@ -406,6 +406,17 @@
         "summary": "Get the information of the profile user",
         "description": "Get the information of the current user. The current user is fetched using the auth cookie.",
         "operationId": "userinfo",
+        "parameters": [
+          {
+            "name": "latest",
+            "in": "query",
+            "description": "if true force update ranking. This must be call only after sign process",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -720,6 +731,15 @@
           "profile_pic": {
             "type": "string",
             "description": "url of the image"
+          }
+        }
+      },
+      "SignResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Succes operation"
           }
         }
       },
