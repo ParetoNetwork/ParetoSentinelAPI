@@ -821,17 +821,17 @@
       "Post": {
         "type": "object",
         "properties": {
-          "owner": {
+          "address": {
             "type": "string",
             "description": "User address token"
           },
-          "content": {
+          "title": {
             "type": "string",
-            "description": "The content of the post"
+            "description": "title"
           },
-          "subject": {
+          "body": {
             "type": "string",
-            "description": "The subject of the post"
+            "description": "the information in html string"
           },
           "category": {
             "type": "string",
@@ -869,9 +869,9 @@
             "type": "string",
             "description": "User address token"
           },
-          "alias": {
+          "title": {
             "type": "string",
-            "description": "alias"
+            "description": "title"
           },
           "body": {
             "type": "string",
