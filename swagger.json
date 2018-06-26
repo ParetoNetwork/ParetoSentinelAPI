@@ -459,8 +459,8 @@
         "tags": [
           "User Posts"
         ],
-        "summary": "create a new Post with the current session",
-        "description": "create a new Post with the current session",
+        "summary": "create/update a new Post with the current session",
+        "description": "create a new Post with the current session. if _id is sent, the post with id equals _id will be updated.",
         "operationId": "post",
         "requestBody": {
           "content": {
@@ -821,6 +821,10 @@
       "Post": {
         "type": "object",
         "properties": {
+          "_id": {
+            "type": "string",
+            "description": "Optional"
+          },
           "address": {
             "type": "string",
             "description": "User address token"
